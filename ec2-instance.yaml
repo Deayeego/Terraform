@@ -2,7 +2,7 @@ Resources:
   Cluster:
     Type: AWS::EKS::Cluster
     Properties:
-      Name: deayegoEKSCluster
+      Name: deayegoEKSClusternode
       RoleArn: arn:aws:iam::388328004932:role/AWSEKSRole
       Version: "1.25"
       ResourcesVpcConfig:
@@ -15,8 +15,8 @@ Resources:
     Type: AWS::EKS::Nodegroup
     DependsOn: Cluster
     Properties:
-      ClusterName: deayegoEKSCluster
-      NodegroupName: deayegoNodegroup
+      ClusterName: deayegoEKSCluster1
+      NodegroupName: deayegoNodegroup1
       InstanceTypes:
         - t2.micro
       DiskSize: 8
